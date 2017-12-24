@@ -191,7 +191,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main-body{
-  margin-top: 50px;
+  margin-top: 35px;
 },
 .container{
   text-align: justify;

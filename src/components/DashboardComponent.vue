@@ -9,8 +9,8 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-          <h1 class="my-4">Page Heading
-            <small>Secondary Text</small>
+          <h1 class="my-4">Articles
+            <small></small>
           </h1>
 
           <!-- Blog Post -->
@@ -141,7 +141,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main-body{
-  margin-top: 50px;
+  margin-top: 35px;
 },
 .container{
   text-align: justify;
