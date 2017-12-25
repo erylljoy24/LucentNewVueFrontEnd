@@ -14,17 +14,18 @@
           </h1>
 
           <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <!--   -->
+          <div v-for="item, i in items" class="card mb-4">
+            <img class="card-img-top" v-bind:src="item.images" alt="Card image cap">
             <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <h2 class="card-title">{{ item.title }}</h2>
+              <p class="card-text">{{ item.content }}</p>
            <!--    <a href="#" class="btn btn-primary" v-link="{path:'ArticleItemComponent'}">Read More &rarr; </a> -->
            <a class="btn btn-primary" v-on:click.prevent="navigateTo('ArticleItemComponent')">Read More &rarr;</a>
             </div>
             <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
+              Posted on {{ item.postedOn }} by
+              <a href="#"> {{ item.postedBy }} </a>
             </div>
           </div>
           <!-- Pagination -->
@@ -122,7 +123,50 @@ export default {
   
   data () {
     return {
-     
+      items: [
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        },
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        },
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        },
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        },
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        },
+        {
+          images: "http://placehold.it/750x300",
+          title: "Sample Article", 
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!", 
+          postedOn: "January 1, 2017",
+          postedBy: "John Doe"
+        }
+      ]
     }
   },
   methods:{
